@@ -2,6 +2,7 @@ package com.cloud.olifeadmin.rest;
 
 import com.cloud.olifeadmin.entity.ToEmail;
 import com.cloud.olifeadmin.event.MqSender;
+import com.cloud.olifeadmin.vo.RestResponse;
 import com.cloud.olifeadmin.service.MqService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
