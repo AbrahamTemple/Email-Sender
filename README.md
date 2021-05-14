@@ -1,7 +1,9 @@
 # SpringBoot结合RabbitMQ发送邮件
 
+## 演示
 ![Screenshot](docs/demo.png)
 
+## 请求
 ``` java
 @RequestMapping("/mq/{email}")
  public RestResponse<String> test(@PathVariable("email") String email){
