@@ -23,9 +23,9 @@ public class AdminController {
     MqService mqService;
 
     @RequestMapping("/mq/{email}")
-    public String test(@PathVariable("email") String email){
+    public RestResponse<String> test(@PathVariable("email") String email){
         String[] tos = {email};
         ToEmail toEmail = new ToEmail(tos, "OLife注册即可安心养老", "app下载的网址:https://github.com/AbrahamTemple/O-Life");
-        return mqService.SendEmail(toEmail);
+        return new RestResponse<String>(HttpStatus.OK.value(), HttpStatus.OK.toString(),mqService.SendEmail(toEmail));
     }
 }
