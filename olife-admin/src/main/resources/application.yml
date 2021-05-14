@@ -1,0 +1,40 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: olife-admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  mail:
+    host: smtp.163.com # 邮箱代理的地址,qq邮箱则为smtp.qq.com
+    protocol: smtp #服务协议
+    default-encoding: UTF-8
+    username: ${TOUR_EMAIL} #发送邮箱的家伙
+    password: ${YOUR_CODE} #授权码
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+  rabbitmq:
+    host: 127.0.0.1
+    username: admin
+    password: admin
+    virtual-host: /
+    port: 5672
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
+    jedis:
+      pool:
+        min-idle: 2
+        max-idle: 10
