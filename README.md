@@ -1,2 +1,3 @@
-# Email-Sender
-SpringBoot与RabbitMQ结合发送邮件
+# SpringBoot结合RabbitMQ发送邮件
+
+![Screenshot](docs/demo.png)
